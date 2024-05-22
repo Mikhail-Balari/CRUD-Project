@@ -1,0 +1,4 @@
+/project/.env
+/project/core/__pycache__
+/project/register/__pycache__
+/project/register/migrations
