@@ -1,7 +1,182 @@
 {% extends 'layout.html' %}
+
 {% block content %}
-<div class="container">
-    <h2>About Me</h2>
-    <p>This is the About Me page.</p>
-</div>
+<main class="flex-shrink-0">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">About Me</span></h1>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-11 col-xl-9 col-xxl-8">
+                <!-- Experience Section-->
+                <section>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h2 class="text-primary fw-bolder mb-0">Experience</h2>
+                        <!-- Download resume button-->
+                        <!-- Note: Set the link href target to a PDF file within your project-->
+                        <a class="btn btn-primary px-4 py-3" href="#!">
+                            <div class="d-inline-block bi bi-download me-2"></div>
+                            Download Resume
+                        </a>
+                    </div>
+                    <!-- Experience Card 1-->
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
+                                        <div class="text-primary fw-bolder mb-2">2023 - Present</div>
+                                        <div class="small fw-bolder">Regional Digital Coordinator</div>
+                                        <div class="small text-muted">Unilever</div>
+                                        <div class="small text-muted">Palermo, Buenos Aires</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8"><div>The Regional Digital Coordinator spearheads digital transformation and
+                                     innovation across multiple industrial development projects within a region. This role 
+                                     involves strategizing, implementing, and overseeing digital solutions that optimize and 
+                                     modernize operations, enhance business models, and drive competitive advantage. The 
+                                     coordinator collaborates with cross-functional teams to ensure alignment with corporate 
+                                     objectives and to foster a culture of continuous innovation and digital adoption.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Experience Card 2-->
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
+                                        <div class="text-primary fw-bolder mb-2">2022 - 2023</div>
+                                        <div class="small fw-bolder">Regional Automation Specialist</div>
+                                        <div class="small text-muted">Cargill</div>
+                                        <div class="small text-muted">Villa Mercedes, San Luis</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8"><div>The Regional Automation Specialist is responsible for designing, 
+                                    implementing, and maintaining automation systems within industrial settings to improve 
+                                    efficiency and productivity. This specialist evaluates existing processes, identifies areas
+                                     for improvement, and deploys cutting-edge automation technologies such as robotics and 
+                                     AI-driven systems. The role demands a deep understanding of industrial workflows, proficiency
+                                      in automation software and tools, and the ability to work closely with engineers and 
+                                      technicians to ensure seamless integration of new technologies.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Education Section-->
+                <section>
+                    <h2 class="text-secondary fw-bolder mb-4">Education</h2>
+                    <!-- Education Card 1-->
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
+                                        <div class="text-secondary fw-bolder mb-2">2020 - 2022</div>
+                                        <div class="mb-2">
+                                            <div class="small fw-bolder">UTN - FRBA</div>
+                                            <div class="small text-muted">Almagro, Buenos Aires</div>
+                                        </div>
+                                        <div class="fst-italic">
+                                            <div class="small text-muted">Bachelor Degree</div>
+                                            <div class="small text-muted">Educational Technology</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div>A Bachelor's Degree in Educational Technology specializes in the 
+                                    integration of digital technologies into educational environments to enhance learning and 
+                                    teaching. Their scope includes the design, implementation, and evaluation of educational 
+                                    technological tools and resources, training teachers in the use of these technologies, and 
+                                    researching the impact of technology on education.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education Card 2-->
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
+                                        <div class="text-secondary fw-bolder mb-2">2016 - 2018</div>
+                                        <div class="mb-2">
+                                            <div class="small fw-bolder">UNSL - FICA</div>
+                                            <div class="small text-muted">Villa Mercedes, San Luis</div>
+                                        </div>
+                                        <div class="fst-italic">
+                                            <div class="small text-muted">Undergraduate</div>
+                                            <div class="small text-muted">Univirsity Technician in Industrial Automation with Computer orientation</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8"><div>A Technician in Industrial Automation with an IT Orientation is 
+                                    trained to design, implement, and maintain automated systems in industrial settings. Their
+                                     scope includes programming programmable logic controllers (PLCs), managing industrial 
+                                     networks and SCADA systems, and integrating IT systems to optimize production processes.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Divider-->
+                <div class="pb-5"></div>
+                <!-- Skills Section-->
+                <section>
+                    <!-- Skillset Card-->
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-5">
+                            <!-- Professional skills list-->
+                            <div class="mb-5">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
+                                    <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Professional Skills</span></h3>
+                                </div>
+                                <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                    <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Data Analytics</div></div>
+                                    <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">IoT Development</div></div>
+                                    <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">AI and Machine Learning</div></div>
+                                </div>
+                                <div class="row row-cols-1 row-cols-md-3">
+                                    <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Process Optimization</div></div>
+                                    <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Project Management</div></div>
+                                    <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Innovation Strategy Development</div></div>
+                                </div>
+                            </div>
+                            <!-- Languages list-->
+                            <div class="mb-0">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
+                                    <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Languages</span></h3>
+                                </div>
+                                <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                    <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML</div></div>
+                                    <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CSS</div></div>
+                                    <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript</div></div>
+                                </div>
+                                <div class="row row-cols-1 row-cols-md-3">
+                                    <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">ReacJS</div></div>
+                                    <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
+                                    <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">NodeRed</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<style>
+    .btn-primary {
+        background-color: #20A8C9;
+        border-color: #20A8C9;
+    }
+    .btn-primary:hover {
+        background-color: #20C997;
+        border-color: #20C997;
+    }
+</style>
 {% endblock %}

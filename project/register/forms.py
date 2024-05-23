@@ -1,8 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
-from .models import Orders
-
+from .models import Orders, Profile
 
 class OrderForm(forms.ModelForm):
     class Meta:
@@ -27,9 +27,26 @@ class OrderForm(forms.ModelForm):
             'addr' : forms.Textarea(attrs={'placeholder': 'your adress here'}),
         }
 
-class SignUpForm(UserCreationForm):
-    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField(max_length=254, help_text='')
+    image = forms.ImageField(required=False, help_text='')
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        fields = ('username', 'email', 'password1', 'password2', 'image')
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.email = self.cleaned_data['email']
+        if commit:
+            user.save()
+            if self.cleaned_data['image']:
+                Profile.objects.create(user=user, image=self.cleaned_data['image'])
+            else:
+                Profile.objects.create(user=user)
+        return user
+    
+
+class LoginForm(AuthenticationForm):
+    class Meta:
+        fields = ['username', 'password']

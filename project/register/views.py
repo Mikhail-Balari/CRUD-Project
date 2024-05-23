@@ -1,8 +1,9 @@
 from django.shortcuts import redirect, render
-from .forms import OrderForm, SignUpForm
+from .forms import OrderForm, UserRegisterForm
 from .models import Orders
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
 
 def home(request):
     return render(request, 'layout.html')
@@ -47,18 +48,28 @@ def deleteView(request, f_oid):
 
 def signupView(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = UserRegisterForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()
-            user.refresh_from_db()  # Cargar el perfil del usuario
+            user.refresh_from_db()
             user.save()
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
             return redirect('home')
     else:
-        form = SignUpForm()
+        form = UserRegisterForm()
     return render(request, 'register/signup.html', {'form': form})
+
+def loginView(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, request.POST)
+        if form.is_valid():
+            login(request, form.get_user())
+            return redirect('home')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'register/login.html', {'form': form})
 
 def aboutView(request):
     return render(request, 'register/about.html')
