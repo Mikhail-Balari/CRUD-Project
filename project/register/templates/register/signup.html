@@ -1,15 +1,15 @@
-{% extends 'layout.html' %}
+{% extends 'core/layout.html' %}
 
 {% block content %}
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card shadow" style="background-color: #f0f2f5;">
+            <div class="card shadow" style="background-color: #f0f2f5;"> 
                 <div class="card-header text-center text-white" style="background-color: #20C997;">
-                    <h4 class="mb-0">Login</h4>
+                    <h4 class="mb-0">Sign Up</h4>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{% url 'login' %}">
+                    <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}
                         <div class="form-group">
@@ -24,7 +24,7 @@
                         </div>
                         {% endfor %}
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
                         </div>
                     </form>
                 </div>

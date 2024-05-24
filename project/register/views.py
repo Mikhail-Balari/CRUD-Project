@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 
 def home(request):
-    return render(request, 'layout.html')
+    return render(request, 'core/layout.html')
 
 def orderFormView(request):
     form = OrderForm()

@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'core/layout.html' %}
 
 {% block content %}
 <main class="flex-shrink-0">
@@ -14,7 +14,7 @@
                         <h2 class="text-primary fw-bolder mb-0">Experience</h2>
                         <!-- Download resume button-->
                         <!-- Note: Set the link href target to a PDF file within your project-->
-                        <a class="btn btn-primary px-4 py-3" href="#!">
+                        <a class="btn btn-primary px-4 py-3 bg-gradient-primary-to-secondary" href="#!">
                             <div class="d-inline-block bi bi-download me-2"></div>
                             Download Resume
                         </a>
@@ -169,14 +169,4 @@
         </div>
     </div>
 </main>
-<style>
-    .btn-primary {
-        background-color: #20A8C9;
-        border-color: #20A8C9;
-    }
-    .btn-primary:hover {
-        background-color: #20C997;
-        border-color: #20C997;
-    }
-</style>
 {% endblock %}

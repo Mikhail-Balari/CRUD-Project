@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'core/layout.html' %}
 
 {% block title %}
     <title>The Order App</title>
@@ -28,11 +28,30 @@
         <td>{{i.mail}}</td>
         <td>{{i.addr}}</td>
         <td>
-            <button class="btn btn-warning"><a href="{% url 'update_url' i.oid %}">Update</a></button>&nbsp;&nbsp;
-            <button class="btn btn-danger"><a href="{% url 'delete_url' i.oid %}">Delete</a></button>
+            <button class="btn btn-update"><a href="{% url 'update_url' i.oid %}">Update</a></button>&nbsp;&nbsp;
+            <button class="btn btn-delete"><a href="{% url 'delete_url' i.oid %}">Delete</a></button>
         </td>
       </tr>
     {% endfor %}
     </tbody>
   </table>
+  <style>
+    .btn-update {
+        background-color: #20C997;
+        border-color: #20C997;
+    }
+    .btn-update:hover {
+        background-color: #18a67b;
+        border-color: #18a67b;
+    }
+    .btn-delete {
+        background-color: #c92066;
+        border-color: #c92066;
+    }
+    .btn-delete:hover {
+        background-color: #a70f4e;
+        border-color: #a70f4e;
+    }
+    
+</style>
 {% endblock %}
